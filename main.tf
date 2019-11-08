@@ -6,7 +6,7 @@ resource "null_resource" "dependency_getter" {
 
 resource "random_id" "bucketAid" {
   byte_length = 4
-  prefix      = "moduleA-"
+  prefix      = "busketa-"
 }
 
 resource "google_storage_bucket" "bucketA" {
