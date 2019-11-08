@@ -4,13 +4,13 @@ resource "null_resource" "dependency_getter" {
   }
 }
 
-resource "random_id" "bucketid" {
+resource "random_id" "bucketAid" {
   byte_length = 4
   prefix      = "moduleA-"
 }
 
 resource "google_storage_bucket" "bucketA" {
-  name     = random_id.bucketid.hex
+  name     = random_id.bucketAid.hex
 }
 
 resource "google_compute_instance" "vm_instance" {
